@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<!-- search -->
+<!-- References for all the pictures:   https://ar.pngtree.com/ -->
+<head>
+<meta charset = "utf-8">
+<title> Search page</title>
+<style type = "text/css">
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6c5b6b;
+    position :absolute;
+}
+
+  header { 
+			background-color: #6c5b6b; 
+           text-align: center;
+         }
+
+  footer { 
+		   background-color: #6c5b6b;
+		   color: white;
+         }
+		 
+  a      {
+			text-decoration:none;
+	       color:gray;
+	     }
+  p      {
+			border-radius:25px;
+		    border:3px solid #ffbf00;
+	        width:300px;
+	        text-align:center;
+	        margin-left:40%;
+	        margin-right:50%;
+	        margin-bottom:0.2%;
+	        padding:10px;
+	        background-color:LemonChiffon;
+			font-size:30px;
+         }	
+		 
+ body{ 
+		background-color: #6c5b6b;
+       } 
+ 
+ .box1 {
+		background-color :#f8b195;
+		height: 35px;
+		}
+		
+.box1 h2 a { 
+             float: left;
+             display: block;
+             text-align: center;
+             padding: 2px 16px;
+             text-decoration: none;
+             font-size: 17px;
+	} 
+
+	
+input[type=text],input[type=email] ,input[type=password] {
+	         border-radius:25px;
+			 border:3px solid #f8b195 ;
+	        width:500px;
+	        text-align:center;
+	        margin-left:30%;
+	        margin-right:30%;
+	        margin-bottom:0.2%;
+	        margin-top: 6% ;
+	        padding:20px;
+  	        background-color:LemonChiffon;
+	        font-size :30px 
+         }
+	 .bb    {
+  
+	         background-color: #f67280 ;
+ 	        border: none;
+ 	        color: #f8b195 ;
+  	        padding: 16px 32px ;
+ 	        text-decoration: none;
+	         margin: 25px 2px;
+	        border-radius:25px;
+	        color:gray;
+	        text-align:center;
+	        width: 200px;
+	        font-size :28px;
+			}
+
+	h6 { 
+	        text-align:center;
+		}
+
+ .dropbtn {
+			background-color: #f8b195;
+			color: white;
+			padding: 0px 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}		 
+ 
+ .dropdown {
+			position: relative;
+			display: inline-block;
+			float : left;
+
+			}
+
+  .dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f8b195;
+			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				width : 112px;
+				font-size: 16px;
+				
+}
+
+  .dropdown-content a {
+				color :#c06c84;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+
+					}
+
+  .dropdown-content a:hover {
+					color: #ddd ;
+				
+				
+
+				
+				}
+
+  .dropdown:hover .dropdown-content  {
+				display: block;
+				
+				
+				}
+
+  .dropdown:hover .dropbtn {
+			
+				}
+
+
+
+</style>
+
+
+<script>
+function myFunction() {
+   var v = document.getElementById("serachbutton").value;
+   var r= v.toLowerCase();
+
+  if (r == "home page"){
+   location.replace("index.html");
+  }
+  else if (r == "game" ||r == "play" ){
+   location.replace("choose your game.html");
+  }
+    else if (r == "about us"  ){
+   location.replace("about us.html");
+  }
+    else if (r == "contact us"  ){
+   location.replace("contact.html");
+  }  
+      else if (r == "log in"  ){
+   location.replace("login.html");
+  }
+      else if (r == "register"  ){
+   location.replace("register2.html");
+  }
+ else {
+ var x ="https://google.com/search?safe=strict&sxsrf=ALeKk00KTq97RRiPPDBskFM4_P8GOZpl6A%3A1607098218376&source=hp&ei=al_KX6yjFIi4a_iVgagH&q="+r ;
+ window.location.href=x;
+ }
+ 
+}
+</script>
+
+</head>
+<body>
+
+<HEADER>
+	<h2>
+	<img src="logo22.png" width ="210" height="220" >
+	</h2> 
+</HEADER>
+
+
+ <section class = "box1">
+      <h2>
+	  
+	  	 <div class="dropdown">
+			<button class="dropbtn"><img src= "arrow.png" width ="30" height=" 30" ></button>
+				<div class="dropdown-content">
+					<a href = "login.html">login     </a><br>
+					<a href = "register2.html">register  </a><br>
+					<a href = "about us.html">about us  </a><br>
+					<a href = "contact.html">contact   </a><br>
+					<a href = "draw.html">pictures  </a><br>
+					<a href = "color.html">game color</a><br>
+					<a href = "puzzels.html">questions </a>
+				</div>
+		  </div>
+		  
+		  
+		   <a href = "search.html"><img src= "searchicon.png" width ="30" height=" 30" > </a>
+           <a href = "choose your game.html"><img src= "game3.png" width ="35" height=" 33" ></a>  
+		   <a href = "index.html"><img src= "HOMEICON.png" width ="30" height=" 30" ></a>
+		  
+
+
+
+      </h2>
+  </section>
+
+
+
+
+<h6><input id ="serachbutton" name = "car" type = "text" placeholder="page name" width = "120" height = "70">
+<button class="bb" onclick="myFunction()">search</button></h6>
+
+<FOOTER><h2><img src="footer22.png"  width ="1490" ></h2></FOOTER>
+
+</body>
+</html>

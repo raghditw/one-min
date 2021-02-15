@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<!-- guess the color -->
+<!-- References for all the pictures:   https://ar.pngtree.com/ -->
+<head>
+<meta charset = "utf-8">
+<title>Guess color</title>
+<style type = "text/css">
+  header { 
+           background-color: #6c5b6b; 
+           text-align: center;
+         }
+
+  footer { 
+           background-color: #6c5b6b;
+		   color: white;
+         }
+		 
+  a      {
+           text-decoration:none;
+	       color:gray;
+	     }
+		 
+  p      { 
+           border-radius:25px;
+           border:3px solid #ffbf00;
+           width:300px;
+           text-align:center;
+           margin-left:40%;
+           margin-right:50%;
+           margin-bottom:0.2%;
+           padding:10px;
+           background-color:LemonChiffon;
+           font-size:30px;
+         }	
+		 
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6c5b6b;
+    position :absolute;
+}
+ 
+ .box1   {
+           background-color :#f8b195;
+           height: 35px;}
+		
+.box1 h2 a { 
+             float: left;
+             display: block;
+             text-align: center;
+             padding: 2px 16px;
+             text-decoration: none;
+             font-size: 17px;
+	       } 
+	
+	input[type=submit], input[type=reset], input[type=button] {
+                background-color:#f67280;
+                border: none;
+                color:white;
+                padding: 16px 32px;
+                text-decoration: none;
+	            margin: auto;
+                border-radius:25px;
+                color:gray;
+	            text-align:center;
+                }
+
+  h6           { 
+                text-align:center;
+		       }
+
+
+  #timer     {
+             width: 100%;
+             height: 30px;
+             position: relative;
+             background-color: #ddd;
+             }
+
+  #myBar     {
+             background-color: #355c7d;
+             width: 10px;
+             height: 30px;
+             position: absolute;
+             }
+
+		 
+  h1        { 
+             color:#f8b195;
+	         font-size:100px;
+	         text-align: center;
+            }
+			
+.dropbtn {
+			background-color: #f8b195;
+			color: white;
+			padding: 0px 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}		 
+ 
+ .dropdown {
+			position: relative;
+			display: inline-block;
+			float : left;
+
+			}
+
+  .dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f8b195;
+			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				width : 112px;
+				font-size: 16px;
+				
+}
+
+  .dropdown-content a {
+				color :#c06c84;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+
+					}
+
+  .dropdown-content a:hover {
+					color: #ddd ;
+				
+				
+
+				
+				}
+
+  .dropdown:hover .dropdown-content  {
+				display: block;
+				
+				
+				}
+
+  .dropdown:hover .dropbtn {
+			
+				}
+
+</style>
+<script>
+
+function check(){
+
+	var question1 = document.guess.blue.value;
+	var question2 = document.guess.green.value;
+	var question3 = document.guess.yellow.value;
+	var question4 = document.guess.purple.value;
+	var question5 = document.guess.red.value;
+	var question6 = document.guess.orange.value;
+
+	var correct = 0;
+
+	if (question1.toLowerCase() == "blue") {
+		correct++;
+    }	
+	if (question2.toLowerCase() == "green") {
+		correct++;
+	}
+    if (question3.toLowerCase() == "yellow") {
+		correct++;
+	}
+	if (question4.toLowerCase() == "purple") {
+		correct++;
+	}
+	if (question5.toLowerCase() == "red") {
+		correct++;
+	}
+	if (question6.toLowerCase() == "orange") {
+		correct++;
+	}
+
+	document.getElementById("number_correct").innerHTML =  " The result is: " + correct;
+}
+	
+	
+	function move() {
+		 window.alert("start timer");
+		 var elem = document.getElementById("myBar");   
+		 var width = 0;
+		 var id = setInterval(frame, 600);
+  		 function frame() {
+      	   if (width == 100) {
+      		 clearInterval(id);
+      		 document.getElementById("blue1").disabled = true;
+      		 document.getElementById("green1").disabled = true;
+      		 document.getElementById("yellow1").disabled = true;
+      		 document.getElementById("purple1").disabled = true;
+      		 document.getElementById("red1").disabled = true;
+      		 document.getElementById("orange1").disabled = true;
+
+          } 
+	      else {
+      		 width++; 
+      		 elem.style.width = width + '%'; 
+          }
+        }
+    }
+
+ window.addEventListener( "load", move, false);
+
+</script>
+</head>
+
+
+<body>
+ <div calss = "timePromot"></div>
+<HEADER><h2><img src="logo22.png" width ="210" height="220" > </h2> 
+</HEADER>
+
+
+  <section class = "box1">
+      <h2>
+	  
+	  	 <div class="dropdown">
+			<button class="dropbtn"><img src= "arrow.png" width ="30" height=" 30" ></button>
+				<div class="dropdown-content">
+					<a href = "login.html">login     </a><br>
+					<a href = "register2.html">register  </a><br>
+					<a href = "about us.html">about us  </a><br>
+					<a href = "contact.html">contact   </a><br>
+					<a href = "draw.html">pictures  </a><br>
+					<a href = "color.html">game color</a><br>
+					<a href = "puzzels.html">questions </a>
+				</div>
+		  </div>
+		  
+		  
+		   <a href = "search.html"><img src= "searchicon.png" width ="30" height=" 30" > </a>
+           <a href = "choose your game.html"><img src= "game3.png" width ="35" height=" 33" ></a>  
+		   <a href = "index.html"><img src= "HOMEICON.png" width ="30" height=" 30" ></a>
+		  
+
+
+
+      </h2>
+  </section>
+
+ <section class = "box2">
+  <div id="timer">
+  <div id="myBar"></div>
+  </div>
+</section>
+
+<h1> Guess Color </h1>
+
+ <form  id = "guess" name = "guess" method="post">
+ <p> <img id = "blue" src = "blue.png" alt = "blue" width="200" hight ="200"><br>
+     <input id ="blue1" name = "blue" type = "text" width = "150"></p>
+	 
+ <p> <img id = "green" src = "green.png" alt = "green" width="200" hight ="200"> <br>
+     <input id ="green1" name = "green" type = "text" width = "150"></p> 
+	 
+ <p> <img id = "yellow" src = "yellow.png" alt = "yellow" width="200" hight ="200"><br>
+     <input id ="yellow1" name = "yellow" type = "text" width = "150"> </p> 
+	 
+ <p> <img id = "purple" src = "purple.png" alt = "purple" width="200" hight ="200"><br>
+     <input id ="purple1" name = "purple" type = "text" width = "150"> </p> 
+	 
+ <p> <img id = "red" src = "red.png" alt = "red" width="200" hight ="200"> <br>
+     <input id ="red1" name = "red" type = "text" width = "150"></p>
+	 
+ <p> <img id = "orange" src = "orange.png" alt = "orange" width="200" hight ="200"><br>
+     <input id = "orange1" name ="orange" type = "text" width = "150"> </p>
+ 
+
+    <h6 id ="box5">
+	  <input type="reset" value="clear">
+	  <input id = "button" type = "button" value = "submit" onclick = "check()">
+	  <br>
+	</h6>
+</form>
+      <div> 
+      <p id = "number_correct"> The result is: </p>
+      </div>
+<FOOTER><h2><img src="footer22.png" width ="1490" > </h2></FOOTER>
+
+</body>
+</html>

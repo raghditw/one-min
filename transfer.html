@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<!-- transfer -->
+<!-- References for all the pictures:   https://ar.pngtree.com/ -->
+<head>
+<meta charset = "utf-8">
+<title>transportation</title>
+<style type = "text/css">
+  header { 
+			background-color: #6c5b6b; 
+           text-align: center;
+         }
+
+  footer {
+			background-color: #6c5b6b;
+		   color: white;
+         }
+		 
+  a        {
+			text-decoration:none;
+	      color:gray;
+	     }
+  p      { 
+		border-radius:25px;
+		border:3px solid #ffbf00;
+		width:300px;
+		text-align:center;
+		margin-left:40%;
+		margin-right:50%;
+		margin-bottom:0.2%;
+		padding:10px;
+		background-color:LemonChiffon;
+		font-size:30px;
+         }	
+		 
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6c5b6b;
+    position :absolute;
+}
+ 
+ .box1 {
+		background-color :#f8b195;
+		height: 35px;
+		}
+		
+		
+.box1 h2 a { 
+             float: left;
+             display: block;
+             text-align: center;
+             padding: 2px 16px;
+             text-decoration: none;
+             font-size: 17px;
+	}
+
+	
+ 
+	input[type=submit], input[type=reset], input[type=button] {
+     background-color:#f67280;
+     border: none;
+     color:white;
+     padding: 16px 32px;
+     text-decoration: none;
+	 margin: auto;
+     border-radius:25px;
+     color:gray;
+	 text-align:center;
+	
+
+}
+
+h6 { 
+	text-align:center;
+	}
+
+
+#timer {
+		width: 100%;
+		height: 30px;
+		position: relative;
+		background-color: #ddd;
+}
+
+#myBar {
+		background-color: #355c7d;
+		width: 10px;
+		height: 30px;
+		position: absolute;
+}
+
+		 
+  h1     { 
+	color:#f8b195;
+	font-size:100px;
+	text-align: center;
+         }
+ 
+  .dropbtn {
+			background-color: #f8b195;
+			color: white;
+			padding: 0px 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}		 
+ 
+ .dropdown {
+			position: relative;
+			display: inline-block;
+			float : left;
+
+			}
+
+  .dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f8b195;
+			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				width : 112px;
+				font-size: 16px;
+				
+}
+
+  .dropdown-content a {
+				color :#c06c84;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+
+					}
+
+  .dropdown-content a:hover {
+					color: #ddd ;
+				
+				
+
+				
+				}
+
+  .dropdown:hover .dropdown-content  {
+				display: block;
+				
+				
+				}
+
+  .dropdown:hover .dropbtn {
+			
+				}
+		 
+
+</style>
+
+
+<script>
+
+function check(){
+
+	var question1 = document.transfer.car.value;
+	var question2 = document.transfer.bus.value;
+	var question3 = document.transfer.ship.value;
+	var question4 = document.transfer.Train.value;
+	var question5 = document.transfer.truck.value;
+	var question6 = document.transfer.airplan.value;
+
+	var correct = 0;
+
+	if (question1.toLowerCase() == "car") {
+		correct++;
+}	
+	if (question2.toLowerCase() == "bus") {
+		correct++;
+	}
+    if (question3.toLowerCase() == "ship") {
+		correct++;
+	}
+	if (question4.toLowerCase() == "Train") {
+		correct++;
+	}
+	if (question5.toLowerCase() == "truck") {
+		correct++;
+	}
+	if (question6.toLowerCase() == "airplan") {
+		correct++;
+	}
+
+	
+
+	document.getElementById("number_correct").innerHTML =  " The result is: " + correct;
+	}
+	
+	
+		 function move() {
+		 window.alert("start timer");
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 600);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+	  document.getElementById("car1").disabled = true;
+	  document.getElementById("bus1").disabled = true;
+	  document.getElementById("ship1").disabled = true;
+	  document.getElementById("Train1").disabled = true;
+	  document.getElementById("truck1").disabled = true;
+	  document.getElementById("airplan1").disabled = true;
+
+    } 
+	else {
+      width++; 
+      elem.style.width = width + '%'; 
+      }
+    }
+  }
+	
+
+
+ window.addEventListener( "load", move, false);
+
+</script>
+</head>
+<body>
+<div calss = "timePromot">
+</div>
+<HEADER>
+<h2><img src="logo22.png" width ="210" height="220" > </h2> 
+</HEADER>
+
+
+ <section class = "box1">
+      <h2>
+	  
+	  	 <div class="dropdown">
+			<button class="dropbtn"><img src= "arrow.png" width ="30" height=" 30" ></button>
+				<div class="dropdown-content">
+					<a href = "login.html">login     </a><br>
+					<a href = "register2.html">register  </a><br>
+					<a href = "about us.html">about us  </a><br>
+					<a href = "contact.html">contact   </a><br>
+					<a href = "draw.html">pictures  </a><br>
+					<a href = "color.html">game color</a><br>
+					<a href = "puzzels.html">questions </a>
+				</div>
+		  </div>
+		  
+		  
+		   <a href = "search.html"><img src= "searchicon.png" width ="30" height=" 30" > </a>
+           <a href = "choose your game.html"><img src= "game3.png" width ="35" height=" 33" ></a>  
+		   <a href = "index.html"><img src= "HOMEICON.png" width ="30" height=" 30" ></a>
+		  
+
+
+
+      </h2>
+  </section>
+
+
+<section class = "box2">
+<div id="timer">
+  <div id="myBar"></div>
+</div>
+</section>
+
+<h1> Choose  the right  transportation </h1>
+
+
+ <form  id = "transfer" name = "transfer" method="post">
+ <p> <img id = "car" src = "car.png" alt = "car" width="200" hight ="200"><br>
+     <input id ="car1" name = "car" type = "text" width = "150"></p>
+ <p> <img id = "bus" src = "bus.png" alt = "bus" width="200" hight ="200"> <br>
+     <input id ="bus1" name = "bus" type = "text" width = "150"></p> 
+ <p> <img id = "ship" src = "ship.png" alt = "ship" width="200" hight ="200"><br>
+     <input id ="ship1" name = "ship" type = "text" width = "150"> </p> 
+ <p> <img id = "Train" src = "Train.png" alt = "Train" width="200" hight ="200"><br>
+     <input id ="Train1" name = "Train" type = "text" width = "150"> </p> 
+ <p> <img id = "truck" src = "truck.png" alt = "truck" width="200" hight ="200"> <br>
+     <input id ="truck1" name = "truck" type = "text" width = "150"></p> 
+ <p> <img id = "airplan" src = "airplan.png" alt = "airplan" width="200" hight ="200"><br>
+     <input id = "airplan1" name ="airplan" type = "text" width = "150"> </p>
+ 
+
+    <h6 id ="box5">
+	  <input type="reset" value="clear">
+	        <input id = "button" type = "button" value = "submit" onclick = "check()">
+	  	  <br>
+	</h6>
+</form>
+       <div> 
+      <p id = "number_correct"> The result is: </p>
+      </div>
+<FOOTER><h2><img src="footer22.png" width ="1490" > <h2></FOOTER>
+
+</body>
+</html>

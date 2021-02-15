@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<!-- Grammar -->
+<!-- References for all the pictures:   https://ar.pngtree.com/ -->
+<head>
+<meta charset ="utf-8">
+<title>Grammer Question</titlE>
+<style type = "text/css">
+  header { background-color: #6c5b6b; 
+           text-align: center;
+         }
+		 
+  h1     { color:#f8b195;
+           font-size:100px;
+           text-align: center;
+         }
+  footer { background-color: #6c5b6b;
+		   color: white;
+         }
+		 
+ a       {
+           text-decoration:none;
+		   color:gray;
+	     }
+		 
+ p       {
+            border-radius:25px;
+            border:3px solid #f8b195;
+            width:300px;
+            text-align:center;
+            margin-left:40%;
+            margin-right:50%;
+            margin-bottom:0.2%;
+            padding:10px;
+            background-color:LemonChiffon;
+            font-size:30px;
+         }	
+		 
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6c5b6b;
+    position :absolute;
+}
+ 
+ .box1   {
+           background-color :#f8b195;
+           height: 35px;
+          }
+		
+ .box1 h2 a { 
+             float: left;
+             display: block;
+             text-align: center;
+             padding: 2px 16px;
+             text-decoration: none;
+             font-size: 17px;
+           } 
+	
+
+	 input[type=submit], input[type=reset], input[type=button],button 
+         {
+           background-color: #f67280;
+           border: none;
+           color:white;
+           padding: 16px 32px;
+           text-decoration: none;
+           margin: auto;
+           border-radius:25px;
+           color:gray;
+           text-align:center;
+          }
+
+ h6       {
+           text-align:center;
+		  }
+		  
+ after_submit 
+          {
+           visibility: hidden;
+           background: #ff5459;
+           padding: 10px 20px 10px 20px;
+           width: 400px;
+           border-radius: 20px;
+           float: left;
+           margin-left: 20px;
+           font-size: 30px;
+          }
+		  
+ mc        {
+           display: inline;
+          } 
+
+
+ #timer   {
+           width: 100%;
+           height: 30px;
+           position: relative;
+           background-color: #ddd;
+          }
+
+ #myBar {
+           background-color: #355c7d;
+           width: 10px;
+           height: 30px;
+           position: absolute;
+		 }
+		 
+ .dropbtn {
+			background-color: #f8b195;
+			color: white;
+			padding: 0px 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}		 
+ 
+ .dropdown {
+			position: relative;
+			display: inline-block;
+			float : left;
+
+			}
+
+  .dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f8b195;
+			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				width : 112px;
+				font-size: 16px;
+				
+}
+
+  .dropdown-content a {
+				color :#c06c84;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+
+					}
+
+  .dropdown-content a:hover {
+					color: #ddd ;
+				
+				
+
+				
+				}
+
+  .dropdown:hover .dropdown-content  {
+				display: block;
+				
+				
+				}
+
+  .dropdown:hover .dropbtn {
+			
+				}
+</style>
+
+
+<script type = "text/javascript" >
+
+ function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+
+	var correct = 0;
+
+		if (question1 == "is") {
+			correct++;
+		}	
+		if (question2 == "who") {
+			correct++;
+		}
+		if (question3 == "was") {
+			correct++;
+		}
+		if (question4 == "be") {
+			correct++;
+		}
+		if (question5 == "There are") {
+			correct++;
+		}
+		if (question6 == "speakes") {
+			correct++;
+		}
+
+
+	document.getElementById("number_correct").innerHTML =  " The result is: " + correct;
+	}//function check()
+	
+function move() {
+  window.alert("start timer");
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 600);
+		function frame() {
+			if (width == 100) {
+				clearInterval(id);
+					document.getElementById("mc1").disabled = true;
+					document.getElementById("mc2").disabled = true;
+					document.getElementById("mc3").disabled = true;
+					document.getElementById("mc4").disabled = true;
+					document.getElementById("mc5").disabled = true;
+					document.getElementById("mc6").disabled = true;
+					document.getElementById("mc7").disabled = true;
+					document.getElementById("mc8").disabled = true;
+					document.getElementById("mc9").disabled = true;
+					document.getElementById("mc10").disabled = true;
+					document.getElementById("mc11").disabled = true;
+					document.getElementById("mc12").disabled = true;
+					document.getElementById("mc13").disabled = true;
+					document.getElementById("mc14").disabled = true;
+					document.getElementById("mc15").disabled = true;
+					document.getElementById("mc16").disabled = true;
+					document.getElementById("mc17").disabled = true;
+					document.getElementById("mc18").disabled = true;
+					document.getElementById("mc19").disabled = true;
+					document.getElementById("mc20").disabled = true;
+					document.getElementById("mc21").disabled = true;
+					document.getElementById("mc22").disabled = true;
+					document.getElementById("mc23").disabled = true;
+					document.getElementById("mc24").disabled = true;
+
+
+				} // end if 
+				else {
+					width++; 
+					elem.style.width = width + '%'; 
+					}//end else
+    }
+  }// end move
+ 
+ 
+ window.addEventListener( "load", move, false);
+</script>
+
+</head>
+
+
+
+<body>
+
+ <div calss = "timePromot"></div>
+ 
+<HEADER><h2><img src="logo22.png" width ="210" height="220"></h2></HEADER>
+
+  <section class = "box1">
+      <h2>
+	  
+	  	 <div class="dropdown">
+			<button class="dropbtn"><img src= "arrow.png" width ="30" height=" 30" ></button>
+				<div class="dropdown-content">
+					<a href = "login.html">login     </a><br>
+					<a href = "register2.html">register  </a><br>
+					<a href = "about us.html">about us  </a><br>
+					<a href = "contact.html">contact   </a><br>
+					<a href = "draw.html">pictures  </a><br>
+					<a href = "color.html">game color</a><br>
+					<a href = "puzzels.html">questions </a>
+				</div>
+		  </div>
+		  
+		  
+		   <a href = "search.html"><img src= "searchicon.png" width ="30" height=" 30" > </a>
+           <a href = "choose your game.html"><img src= "game3.png" width ="35" height=" 33" ></a>  
+		   <a href = "index.html"><img src= "HOMEICON.png" width ="30" height=" 30" ></a>
+		  
+
+
+
+      </h2>
+  </section>
+
+
+ <section class = "box2">
+	<div id="timer">
+		<div id="myBar"></div>
+	</div>
+ </section>
+
+
+<h1> Grammer Question </h1>
+
+<section> 
+<form id = "quiz" name = "quiz">
+
+<p id= "q1" class = "questions">Q1: Jenny ___________ tired.<br>
+<input type = "radio" id = "mc1" name = "question1" value = "be"> be<br>
+<input type = "radio" id = "mc2" name = "question1" value = "is"> is<br>
+<input type = "radio" id = "mc3" name = "question1" value = "has"> has<br>
+<input type = "radio" id = "mc4" name = "question1" value = "have"> have<br></p>
+
+
+<p class = "questions">Q2: " ___________ is she?" "She's my friend from London. <br>
+
+<input type = "radio" id = "mc5" name = "question2" value = "who"> who<br>
+<input type = "radio" id = "mc6" name = "question2" value = "why"> why<br>
+<input type = "radio" id = "mc7" name = "question2" value = "which"> which<br>
+<input type = "radio" id = "mc8" name = "question2" value = "what"> what<br></p>
+
+
+<p class = "questions">Q3: Today is Wednesday. Yesterday it ___________ Tuesday. <br>
+
+<input type = "radio" id = "mc9" name = "question3" value = "were"> were<br>
+<input type = "radio" id = "mc10" name = "question3" value = "is"> is<br>
+<input type = "radio" id = "mc11" name = "question3" value = "be"> be<br>
+<input type = "radio" id = "mc12" name = "question3" value = "was"> was<br></p>
+
+<p class = "questions">Q4: It's Thursday today. Tomorrow it ___________ Friday. <br>
+
+<input type = "radio" id = "mc13" name = "question4" value = "be"> be<br>
+<input type = "radio" id = "mc14" name = "question4" value = "was"> was<br>
+<input type = "radio" id = "mc15" name = "question4" value = "will be"> will be<br>
+<input type = "radio" id = "mc16" name = "question4" value = "will"> will<br></p>
+
+<p class = "questions">Q5: ___________ lots of animals in the zoo. <br>
+<input type = "radio" id = "mc17" name = "question5" value = "there"> there<br>
+<input type = "radio" id = "mc18" name = "question5" value = "there is"> there is<br>
+<input type = "radio" id = "mc19" name = "question5" value = "There are not"> There are not<br>
+<input type = "radio" id = "mc20" name = "question5" value = "There are"> There are<br>
+</p>
+
+<p class = "questions">Q6: Jack ___________ English, Spanish and a bit of French. <br>
+
+<input type = "radio" id = "mc21" name = "question6" value = "speak"> speak<br>
+<input type = "radio" id = "mc22" name = "question6" value = "speakes"> speakes<br>
+<input type = "radio" id = "mc23" name = "question6" value = "is speaking"> is speaking<br>
+<input type = "radio" id = "mc24" name = "question6" value = "speaking"> speaking<br>
+</p>
+
+
+
+    <h6 id ="box5">
+	  <input type="reset" value="clear">
+	  <input id = "button" type = "button" value = "submit" onclick = "check()">
+	  	  <br>
+	</h6>
+</form>
+</section>
+       <div> 
+      <p id = "number_correct"> The result is: </p>
+      </div>
+<FOOTER><h2><img src="footer22.png" width ="1490" ></h2></FOOTER>
+</body>
+</html>

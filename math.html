@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<!-- math -->
+<!-- References for all the pictures:   https://ar.pngtree.com/ -->
+<head>
+<meta charset ="utf-8">
+<title>Math Question</titlE>
+<style type = "text/css">
+  header { 
+           background-color: #6c5b6b; 
+           text-align: center;
+         } 
+		 
+  h1     { 
+           color:#f8b195;
+	       font-size:100px;
+	       text-align: center;
+         }
+		 
+  footer { 
+           background-color: #6c5b6b;
+		   color: white;
+         }
+		 
+  a      {
+          text-decoration:none;
+	      color:gray;
+	     }
+		 
+ p       { 
+           border-radius:25px;
+	       border:3px solid #f8b195;
+	       width:300px;
+	       text-align:center;
+	       margin-left:40%;
+	       margin-right:50%;
+	       margin-bottom:0.2%;
+	       padding:10px;
+	       background-color:LemonChiffon;
+	       font-size:30px;
+         }	
+		 
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6c5b6b;
+    position :absolute;
+}
+ 
+ .box1   {
+           background-color :#f8b195;
+	       height: 35px;
+		 }
+		
+ .box1 h2 a { 
+             float: left;
+             display: block;
+             text-align: center;
+             padding: 2px 16px;
+             text-decoration: none;
+             font-size: 17px;
+	         } 
+
+  input[type=submit], input[type=reset], input[type=button],button {
+	 
+            background-color: #f67280;
+            border: none;
+            color:white;
+            padding: 16px 32px;
+            text-decoration: none;
+	        margin: auto;
+            border-radius:25px;
+            color:gray;
+	        text-align:center;
+            }
+
+ h6         {
+            text-align:center;
+			}
+			
+ after_submit {
+	        visibility: hidden;
+	        background: #ff5459;
+	        padding: 10px 20px 10px 20px;
+	        width: 400px;
+	        border-radius: 20px;
+	        float: left;
+	        margin-left: 20px;
+	        font-size: 30px;
+            }
+			
+  mc        {
+	        display: inline;
+            } 
+			
+  #timer   {
+           width: 100%;
+           height: 30px;
+           position: relative;
+           background-color: #ddd;
+           }
+		   
+ #myBar    {
+           background-color: #355c7d;
+           width: 10px;
+           height: 30px;
+           position: absolute;
+           }
+ .dropbtn {
+			background-color: #f8b195;
+			color: white;
+			padding: 0px 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			}		 
+ 
+ .dropdown {
+			position: relative;
+			display: inline-block;
+			float : left;
+
+			}
+
+  .dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f8b195;
+			 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+				width : 112px;
+				font-size: 16px;
+				
+}
+
+  .dropdown-content a {
+				color :#c06c84;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+
+					}
+
+  .dropdown-content a:hover {
+					color: #ddd ;
+				
+				
+
+				
+				}
+
+  .dropdown:hover .dropdown-content  {
+				display: block;
+				
+				
+				}
+
+  .dropdown:hover .dropbtn {
+			
+				}
+</style>
+<script type = "text/javascript" >
+
+  function check(){
+	var question1 = document.quiz.choose1.value;
+	var question2 = document.quiz.choose2.value;
+	var question3 = document.quiz.choose3.value;
+	var question4 = document.quiz.choose4.value;
+	var question5 = document.quiz.choose5.value;
+	var question6 = document.quiz.choose6.value;
+
+	var correct = 0;
+
+	if (question1 == "5") {
+		correct++;
+    }	
+	if (question2 == "30") {
+		correct++;
+	}
+    if (question3 == "1,16") {
+		correct++;
+	}
+	if (question4 == "14") {
+		correct++;
+	}
+	if (question5 == "1") {
+		correct++;
+	}
+	if (question6 == "1") {
+		correct++;
+	}
+	document.getElementById("number_correct").innerHTML =  " The result is: " + correct;
+  }
+	
+	
+	 function move() {
+		 window.alert("start timer");
+         var elem = document.getElementById("myBar");   
+         var width = 0;
+         var id = setInterval(frame, 600);
+         function frame() {
+           if (width == 100) {
+           clearInterval(id);
+	       document.getElementById("mc1").disabled = true;
+	       document.getElementById("mc2").disabled = true;
+	       document.getElementById("mc3").disabled = true;
+	       document.getElementById("mc4").disabled = true;
+	       document.getElementById("mc5").disabled = true;
+	       document.getElementById("mc6").disabled = true;
+	       document.getElementById("mc7").disabled = true;
+	       document.getElementById("mc8").disabled = true;
+	       document.getElementById("mc9").disabled = true;
+	       document.getElementById("mc10").disabled = true;
+	       document.getElementById("mc11").disabled = true;
+	       document.getElementById("mc12").disabled = true;
+	       document.getElementById("mc13").disabled = true;
+	       document.getElementById("mc14").disabled = true;
+	       document.getElementById("mc15").disabled = true;
+	       document.getElementById("mc16").disabled = true;
+	       document.getElementById("mc17").disabled = true;
+	       document.getElementById("mc18").disabled = true;
+	       document.getElementById("mc19").disabled = true;
+	       document.getElementById("mc20").disabled = true;
+	       document.getElementById("mc21").disabled = true;
+	       document.getElementById("mc22").disabled = true;
+	       document.getElementById("mc23").disabled = true;
+	       document.getElementById("mc24").disabled = true;
+         } 
+		 
+	else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+   }
+  } 
+ window.addEventListener( "load", move, false);
+</script>
+
+</head>
+
+
+<body>
+ <div calss = "timePromot"></div>
+ <HEADER><h2><img src="logo22.png" width ="210" height="220" ></h2></HEADER>
+
+
+ <section class = "box1">
+      <h2>
+	  
+	  	 <div class="dropdown">
+			<button class="dropbtn"><img src= "arrow.png" width ="30" height=" 30" ></button>
+				<div class="dropdown-content">
+					<a href = "login.html">login     </a><br>
+					<a href = "register2.html">register  </a><br>
+					<a href = "about us.html">about us  </a><br>
+					<a href = "contact.html">contact   </a><br>
+					<a href = "draw.html">pictures  </a><br>
+					<a href = "color.html">game color</a><br>
+					<a href = "puzzels.html">questions </a>
+				</div>
+		  </div>
+		  
+		  
+		   <a href = "search.html"><img src= "searchicon.png" width ="30" height=" 30" > </a>
+           <a href = "choose your game.html"><img src= "game3.png" width ="35" height=" 33" ></a>  
+		   <a href = "index.html"><img src= "HOMEICON.png" width ="30" height=" 30" ></a>
+		  
+
+
+
+      </h2>
+  </section>
+
+<section class = "box2">
+ <div id="timer">
+ <div id="myBar"></div>
+ </div>
+</section>
+
+<h1> Math Question </h1>
+
+<section> 
+ <form id = "quiz" name = "quiz">
+ 
+  <p>Q1: What is the number that if you multiply it by itself,
+  then add the number five to it, the final answer is 30? <br>
+  <input id ="mc1" name = "choose1" type = "radio" value ="20" /> 20<br>
+  <input id ="mc2" name = "choose1" type = "radio" value ="50" /> 50 <br>
+  <input id ="mc3" name = "choose1" type = "radio" value ="5" /> 5 <br>
+  <input id ="mc4" name = "choose1" type = "radio" value ="2" /> 2 <br>
+	</p>
+
+	<p>Q2: What is the product of 2 times 5 times 3? <br>
+  <input id ="mc5" name = "choose2" type = "radio" value ="3" /> 3<br>
+  <input id ="mc6" name = "choose2" type = "radio" value ="30" /> 30<br>
+  <input id ="mc7" name = "choose2" type = "radio" value ="60" /> 60<br>
+  <input  id ="mc8" name = "choose2" type = "radio" value ="6" /> 6<br>
+	</p>
+
+   <p>Q3: Two numbers if you multiply them, their result is 16,
+  and if you add them together, their result is 17?<br>
+  <input id ="mc9" name = "choose3" type = "radio" value ="0" /> 0<br>
+  <input id ="mc10" name = "choose3" type = "radio" value ="16,1" /> 16,1<br>
+  <input id ="mc11" name = "choose3" type = "radio" value ="1,16" /> 1,16<br>
+  <input id ="mc12" name = "choose3" type = "radio" value ="6" /> 6 <r>
+  </p>
+
+	 <p>Q4:  What is the result of 2 in (4 + 3)?<br>
+  <input id ="mc13" name = "choose4" type = "radio" value = "41" /> 41<br>
+  <input id ="mc14" name = "choose4" type = "radio" value = "13" /> 13<br>
+  <input id ="mc15" name = "choose4" type = "radio" value = "14" /> 14<br>
+  <input id ="mc16" name = "choose4" type = "radio" value = "31" /> 31<br>
+	</p>
+
+	  <p>Q5:  What is the result of 1 x 4 +4 x 0 - 3?<br>
+  <input id = "mc17" name = "choose5" type = "radio" value = "1" /> 1<br>
+  <input id = "mc18" name = "choose5" type = "radio" value = "31" /> 31<br>
+  <input id = "mc19" name = "choose5" type = "radio" value = "13" /> 13<br>
+  <input id = "mc20" name = "choose5" type = "radio" value = "3" />  3<br>
+	</p>
+
+     <p>Q6: What is the result of 8 ^ 0?<br>
+   <input id = "mc21" name = "choose6" type = "radio" value = "1" /> 1<br>
+   <input id = "mc22" name = "choose6" type = "radio" value = "0" /> 0<br>
+   <input id = "mc23" name = "choose6" type = "radio" value = "8" /> 8<br>
+   <input id = "mc24" name = "choose6" type = "radio" value = "80" /> 80<br>
+	</p>
+  
+    <h6 id ="box5">
+	  <input type="reset" value="clear">
+	  <input id = "button" type = "button" value = "submit" onclick = "check();">
+	  <br>
+	</h6>
+</form>
+</section>
+      <div> 
+      <p id = "number_correct"> The result is: </p>
+      </div>
+<FOOTER><h2><img src="footer22.png" width ="1490" ></h2></FOOTER>
+</body>
+</html>
